@@ -1,10 +1,15 @@
+import {useState} from "react";
+import { products } from "./produkty"
+
 function Product() {
     const [product, setProduct] = useState(null)
     return <div className="col">
         <div className="card" style={{width: "18rem"}}>
             <div className="card-body">
                 <h5 className="card-title">Card title</h5>
-                <p className="card-text"></p>
+                <p className="card-text">
+                    {products}
+                </p>
                 <a className="btn btn-primary" onClick={() => setProduct((product) => product + 1)}>Dodaj do koszyka</a>
             </div>
             <div className="card-footer text-body-secondary">
